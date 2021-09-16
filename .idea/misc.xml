@@ -3,10 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/drawable/textview_background_shape.xml" value="0.23333333333333334" />
         <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
         <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/layout/fragment_cart.xml" value="0.23854166666666668" />
         <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/layout/fragment_product_details.xml" value="0.23854166666666668" />
         <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/layout/fragment_product_list.xml" value="0.23854166666666668" />
+        <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/layout/item_product.xml" value="0.4" />
         <entry key="..\:/PracticeAndroidProjects/DummyProducts/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.25416666666666665" />
       </map>
     </option>
