@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.dummyproducts.R
 import com.example.dummyproducts.adapters.ProductsAdapter
+import com.example.dummyproducts.models.ProductsResponseItem
 import com.example.dummyproducts.ui.MainActivity
 import com.example.dummyproducts.ui.ProductsViewModel
 import com.example.dummyproducts.util.Resource
@@ -58,6 +60,16 @@ class ProductListFragment : Fragment() {
 
             }
         }
+
+        productsAdapter.setOnItemClickListener(object : ProductsAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int, product: ProductsResponseItem) {
+                val bundle = Bundle()
+                bundle.putParcelable("product", product)
+                Navigation.findNavController(view)
+                    .navigate(R.id.action_productListFragment_to_productDetailsFragment, bundle)
+
+            }
+        })
 
 
         return view

@@ -65,7 +65,7 @@ class ProductsAdapter : RecyclerView.Adapter<ProductsAdapter.ProductViewHolder>(
     }
 
     interface OnItemClickListener {
-        fun onItemClick(position: Int, article: ProductsResponseItem)
+        fun onItemClick(position: Int, product: ProductsResponseItem)
     }
 
 }

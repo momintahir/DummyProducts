@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.dummyproducts.models.ProductsResponse
+import com.example.dummyproducts.models.ProductsResponseItem
 import com.example.dummyproducts.repositories.ProductsRepository
 import com.example.dummyproducts.util.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -25,5 +26,12 @@ class ProductsViewModel @Inject constructor(
         products.value = Resource.Success(response)
 
     }
+
+    fun saveProduct(product: ProductsResponseItem)=viewModelScope.launch {
+        productsRepository.upsert(product)
+    }
+
+    fun getProductsFromCart()=productsRepository.getProductsFromCart()
+
 
 }
