@@ -12,6 +12,6 @@ interface ProductsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(product: ProductsResponseItem): Long
 
-    @Query("SELECT * FROM pro")
+    @Query("SELECT * FROM products")
     fun getAllArticles(): Flow<List<ProductsResponseItem>>
 }

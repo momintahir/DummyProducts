@@ -6,12 +6,12 @@ import com.example.dummyproducts.models.Rating
 class Converters {
 
     @TypeConverter
-    fun fromSource(rating: Rating): String {
+    fun fromRating(rating: Rating): String {
         return rating.rate.toString()
     }
 
     @TypeConverter
-    fun toSource(count: Int,rate:Double): Rating {
-        return Rating(count, rate)
+    fun toRating(rate:Double): Rating {
+        return Rating(rate, rate)
     }
 }

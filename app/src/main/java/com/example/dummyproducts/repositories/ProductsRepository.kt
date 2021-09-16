@@ -8,5 +8,5 @@ class ProductsRepository @Inject constructor(
     private val db: ProductsDatabase,
     private val api: ProductsApi
 ) {
-    suspend fun getSearchNews() = api.getAllProducts()
+    suspend fun getAllProducts() = api.getAllProducts()
 }

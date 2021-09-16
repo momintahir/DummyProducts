@@ -3,8 +3,9 @@ package com.example.dummyproducts.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+
 @Entity(
-    tableName = "articles"
+    tableName = "products"
 )
 data class ProductsResponseItem(
     @PrimaryKey
@@ -13,6 +14,5 @@ data class ProductsResponseItem(
     val description: String,
     val image: String,
     val price: Double,
-    val rating: Rating,
     val title: String
 )
