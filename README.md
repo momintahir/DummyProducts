@@ -7,6 +7,9 @@ User can check the details of the product by clicking on any item from the list.
 # Architecture
 This application is built in MVVM architecture and have used nav component for navigation. For API calling I have used Retrofit and for data persistance I have used Room Database. For dependency injection I have used dagger-hilt. The application is built on single activity which has further multiple fragments. 
 
+# API Used
+The API which I have used is from https://fakestoreapi.com/ 
+
 # Unit Tests
 I have implemented Room Dao Unit test cases using JUnit.
 
