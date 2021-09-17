@@ -80,4 +80,8 @@ dependencies {
     // Dagger-Hilt
     implementation("com.google.dagger:hilt-android:2.38.1")
     kapt("com.google.dagger:hilt-android-compiler:2.38.1")
+
+    //Shimmer Animation
+    implementation 'xyz.peridy.shimmer:shimmerlayout:1.1'
+
 }

@@ -1,5 +1,6 @@
 package com.example.dummyproducts.ui.fragments
 
+import android.opengl.Visibility
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -40,6 +41,8 @@ class ProductListFragment : Fragment() {
             viewModel.products.collect { response ->
                 when (response) {
                     is Resource.Success -> {
+                        view.shimmer_layout.visibility=View.GONE
+
                         response.data?.let { productsResponse ->
                             productsAdapter.differ.submitList(productsResponse)
                         }
@@ -55,6 +58,7 @@ class ProductListFragment : Fragment() {
                         }
                     }
                     is Resource.Loading -> {
+                        view.shimmer_layout.visibility=View.VISIBLE
                     }
                 }
 
