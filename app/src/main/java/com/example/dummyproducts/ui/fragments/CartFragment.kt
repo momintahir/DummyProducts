@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.dummyproducts.R
 import com.example.dummyproducts.adapters.ProductsAdapter
+import com.example.dummyproducts.models.ProductsResponseItem
 import com.example.dummyproducts.ui.MainActivity
 import com.example.dummyproducts.ui.ProductsViewModel
 import kotlinx.android.synthetic.main.fragment_product_list.view.*
@@ -31,8 +33,17 @@ class CartFragment : Fragment() {
         viewModel.getProductsFromCart().observe(viewLifecycleOwner, Observer { products ->
             productsAdapter.differ.submitList(products)
         })
+
+        productsAdapter.setOnItemClickListener(object : ProductsAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int, product: ProductsResponseItem) {
+
+            }
+        })
+
+
         return view
     }
+
 
     private fun setupRecyclerView(view: View) {
         productsAdapter = ProductsAdapter()

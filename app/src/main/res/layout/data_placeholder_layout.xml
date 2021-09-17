@@ -2,12 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:padding="16dp"
     android:layout_height="wrap_content">
 
     <View
         android:id="@+id/ivProduct"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:layout_marginStart="30dp"
         android:background="@color/shimmerBackground"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -16,6 +18,7 @@
         android:id="@+id/tvPrice"
         android:layout_width="90dp"
         android:layout_height="20dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:background="@color/shimmerBackground"
         android:text="Rs.435"
@@ -27,6 +30,7 @@
         android:layout_width="90dp"
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
         android:background="@color/shimmerBackground"
         android:text="American garden peanut butter"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -40,6 +44,7 @@
         android:layout_marginTop="10dp"
         android:background="@color/shimmerBackground"
         android:text="mens clothing"
+        android:layout_marginStart="30dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvName" />
 
@@ -55,6 +60,7 @@
         android:id="@+id/ivProductRight"
         android:layout_width="90dp"
         android:layout_height="90dp"
+        android:layout_marginStart="30dp"
         android:background="@color/shimmerBackground"
         app:layout_constraintLeft_toRightOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
@@ -63,6 +69,7 @@
         android:id="@+id/tvPriceRight"
         android:layout_width="90dp"
         android:layout_height="20dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="10dp"
         android:background="@color/shimmerBackground"
         android:text="Rs.435"
@@ -74,6 +81,7 @@
         android:layout_width="90dp"
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
         android:background="@color/shimmerBackground"
         android:text="American garden peanut butter"
         app:layout_constraintLeft_toRightOf="@id/guideline"
@@ -85,6 +93,7 @@
         android:layout_width="90dp"
         android:layout_height="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
         android:background="@color/shimmerBackground"
         android:text="mens clothing"
         app:layout_constraintLeft_toRightOf="@id/guideline"
