@@ -13,7 +13,9 @@ import com.example.dummyproducts.adapters.ProductsAdapter
 import com.example.dummyproducts.models.ProductsResponseItem
 import com.example.dummyproducts.ui.MainActivity
 import com.example.dummyproducts.ui.ProductsViewModel
+import kotlinx.android.synthetic.main.fragment_cart.view.*
 import kotlinx.android.synthetic.main.fragment_product_list.view.*
+import kotlinx.android.synthetic.main.fragment_product_list.view.recyclerView
 import kotlinx.coroutines.flow.observeOn
 
 
@@ -31,7 +33,15 @@ class CartFragment : Fragment() {
         setupRecyclerView(view)
 
         viewModel.getProductsFromCart().observe(viewLifecycleOwner, Observer { products ->
-            productsAdapter.differ.submitList(products)
+            if (products.isEmpty()) {
+                view.cart.visibility = View.VISIBLE
+                view.tvNoItemsCart.visibility = View.VISIBLE
+            } else {
+                view.cart.visibility = View.GONE
+                view.tvNoItemsCart.visibility = View.GONE
+                productsAdapter.differ.submitList(products)
+
+            }
         })
 
         productsAdapter.setOnItemClickListener(object : ProductsAdapter.OnItemClickListener {
