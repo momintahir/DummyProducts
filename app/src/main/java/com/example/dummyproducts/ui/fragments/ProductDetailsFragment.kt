@@ -11,6 +11,7 @@ import com.example.dummyproducts.R
 import com.example.dummyproducts.models.ProductsResponseItem
 import com.example.dummyproducts.ui.MainActivity
 import com.example.dummyproducts.ui.ProductsViewModel
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.fragment_product_details.view.*
 import kotlinx.android.synthetic.main.item_product.view.*
 import kotlinx.android.synthetic.main.item_product.view.ivProduct
@@ -35,12 +36,13 @@ class ProductDetailsFragment : Fragment() {
             product = bundle.getParcelable<Parcelable>("product") as ProductsResponseItem
         }
         Glide.with(this).load(product.image).into(view.ivProduct)
-        view.tvPrice.text= product.price.toString()
-        view.tvName.text= product.title
-        view.tvDescription.text= product.description
+        view.tvPrice.text = product.price.toString()
+        view.tvName.text = product.title
+        view.tvDescription.text = product.description
 
         view.btnAddToCart.setOnClickListener {
             viewModel.saveProduct(product)
+            Snackbar.make(view, "Product added in cart successfully", Snackbar.LENGTH_SHORT).show()
         }
 
         return view
