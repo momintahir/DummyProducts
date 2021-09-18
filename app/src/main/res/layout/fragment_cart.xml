@@ -24,14 +24,14 @@
         android:layout_height="wrap_content"
         android:visibility="gone"
         android:id="@+id/tvNoItemsCart"
-        android:text="No items in your cart"
+        android:text="@string/no_items_in_your_cart"
         app:layout_constraintTop_toBottomOf="@id/cart"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginTop="5dp"
         android:textColor="@color/black"
         android:textStyle="bold"
-        android:textSize="17dp"
+        android:textSize="17sp"
         />
 
     <androidx.recyclerview.widget.RecyclerView

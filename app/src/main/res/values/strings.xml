@@ -6,4 +6,7 @@
     <string name="mens_clothing">mens clothing</string>
     <string name="american_garden_peanut_butter">American garden peanut butter</string>
     <string name="rs_435">Rs.435</string>
+    <string name="products">Products</string>
+    <string name="cart">Cart</string>
+    <string name="no_items_in_your_cart">No items in your cart</string>
 </resources>
